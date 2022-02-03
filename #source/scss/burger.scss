@@ -1,0 +1,52 @@
+$buger-color:#000;
+$buger-color2:#fff;
+.burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+    & span {
+        background-color: $buger-color;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 50%;
+        transition: all 0.3s ease 0s;
+    }
+    &:before,
+    &:after {
+        content: '';
+        background-color: $buger-color;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    &:before {
+        top: 0;
+    }
+    &:after {
+        bottom: 0;
+    }
+    &.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+        background-color: $buger-color2;
+    }
+    &.active span {
+        transform: scale(0);
+        background-color: $buger-color2;
+    }
+    &.active:after {
+        background-color: $buger-color2;
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+}
+
+.lock {
+    overflow: hidden;
+}

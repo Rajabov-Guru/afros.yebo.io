@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+$fontfamily:"Lato";
+$main-color:#353738;
+$section-bg:#f7f7f7;
+$hover-color: #64c29e;
+//?==============================================================
+@import "null.scss";
+@import "ibg.scss";
+body {
+    font-family: $fontfamily;
+    background-color: $section-bg;
+    color: $main-color;
+}
+
+.wrapper {
+    overflow-x: hidden;
+}
+
+
+/*.container {
+    max-width: 856px;
+    margin: 0px auto;
+    padding: 0px 20px;
+    height: 100%;
+}*/
+
+@import "header.scss";
+@import "footer.scss";
